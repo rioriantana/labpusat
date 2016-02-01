@@ -12,17 +12,31 @@
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		 <script type="text/javascript" charset="utf-8">
+      $(function(){
+        $("input:checkbox, input:radio, input:file, select").uniform();
+      });
+    </script>
 		<g:layoutHead/>
 		<g:javascript library="application"/>		
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+	<article>
+	<br>     
+	<img src="${resource(dir: 'images', file: 'header.png')}" width="960" class="absolute" align="center">
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<r:layoutResources />
+	</article>
+<br>
+<footer>
+<p class="center">UPT Laboratorium PUSAT MIPA <strong>UNS</strong></p>
+</footer>
 	</body>
 </html>

@@ -1,22 +1,25 @@
 package labpusat
 
 class Paket {
-	nama
-	jenisContohUji
-	parameterKimia
-	parameterBiologi
-	parameterUdara
-	harga
+	String nama
+	String jenisContohUji
+	String parameterKimia
+	String parameterBiologi
+	String parameterUdara
+	String kodePaket
+	Integer nomorUrut
+	Integer harga
     static constraints = {
     	nama(nullable: true)
 		jenisContohUji(nullable: true)
 		parameterKimia(nullable: true)
 		parameterBiologi(nullable: true)
 		parameterUdara(nullable: true)
+		nomorUrut(nullable: true)
 		harga(nullable: true)
     }
 
     public String toString(){
-    	"$nama"
+    	"$nomorUrut . "+"$nama"
     }
 }

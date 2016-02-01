@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
+		<title>Sistem Informasi Lab PUSAT UNS</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -81,7 +81,6 @@
 		</style>
 	</head>
 	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
 			<h1>Application Status</h1>
 			<ul>
@@ -103,19 +102,16 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
+			<h1 class="center">Selamat Datang di Sistem Informasi Lab PUSAT UNS</h1>
 
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
+				<button type="submit"><g:link controller="paket">Paket Uji</g:link></button>
+				<button type="submit"><g:link controller="agenda">List Agenda</g:link></button>
+				<button type="submit"><g:link controller="pendaftaran">List Paket Pendaftaran</g:link></button>
+				<button type="submit"><g:link controller="pengujian">Pengujian</g:link></button>
+				<button type="submit"><g:link controller="rekap" action="pendaftaran">Rekap Pendaftaran</g:link></button>
+				<button type="submit"><g:link controller="rekap" action="pengujian">Rekap Pengujian</g:link></button>
 			</div>
 		</div>
 	</body>

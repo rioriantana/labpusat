@@ -11,6 +11,8 @@ class Pendaftaran {
 	String kemasan
 	String status
 	Integer total
+	String statusBayar
+	String keterangan
     static constraints = {
     	nomorAgenda(nullable: true)
 		ketersediaanRekamanUji(nullable: true, inList: ['Ada', 'Tidak Ada'])
@@ -22,6 +24,8 @@ class Pendaftaran {
 		kemasan(nullable: true, inList: ['Botol Plastik', 'Botol Kaca', 'Jirigen'])	
 		status(nullable: true)
 		total(nullable: true)
+		statusBayar(nullable: true)
+		keterangan(nullable: true)
     }
     public String toString(){
     	"$nomorAgenda - $jenisContohUji"

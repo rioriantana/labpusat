@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Sistem Informasi Lab PUSAT UNS</title>
+		<title>Sistem Pelayanan Lab Terpadu UNS</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -37,6 +37,7 @@
 			#status h1 {
 				text-transform: uppercase;
 				font-size: 1.1em;
+				color: #000;
 				margin: 0 0 0.3em;
 			}
 
@@ -102,7 +103,7 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1 class="center">Selamat Datang di Sistem Informasi Lab PUSAT UNS</h1>
+			<h1 class="center">Selamat Datang di Sistem Layanan UPT Lab Terpadu UNS</h1>
 
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>

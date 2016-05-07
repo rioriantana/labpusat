@@ -35,12 +35,12 @@ class PendaftaranController {
             return
         }
         def paketUji = Paket.get(params.jenisContohUji.id)
+        def agendaUji = Agenda.get(params.nomorAgenda)
         pendaftaranInstance.jumlahContohUji = params.jumlahContohUji.toInteger()
-        pendaftaranInstance.total = paketUji.harga * params.jumlahContohUji.toInteger()
+         pendaftaranInstance.total = paketUji.harga * params.jumlahContohUji.toInteger()
         pendaftaranInstance.status = "Pendaftaran"
         pendaftaranInstance.tanggal = new Date()
         pendaftaranInstance.save flush:true
-
         request.withFormat {
             form multipartForm {
                 flash.message = 'Pendaftaran Paket Berhasil, silahkan tunggu panggilan dari petugas atau tambah paket pengujian.'
@@ -71,7 +71,7 @@ class PendaftaranController {
         def agendaInstance = Agenda.get(params.nomorAgenda)
         pendaftaranInstance.nomorAgenda = agendaInstance
         pendaftaranInstance.jumlahContohUji = params.jumlahContohUji.toInteger()
-        pendaftaranInstance.total = paketUji.harga * params.jumlahContohUji.toInteger()
+         pendaftaranInstance.total = paketUji.harga * params.jumlahContohUji.toInteger()
         pendaftaranInstance.status = "Pendaftaran"
         pendaftaranInstance.save flush:true
 
@@ -100,7 +100,8 @@ class PendaftaranController {
             return
         }
         def paketUji = Paket.get(params.jenisContohUji.id)
-        pendaftaranInstance.total = paketUji.harga * params.jumlahContohUji.toInteger()
+        def agendaInstance = Agenda.get(params.nomorAgenda.id)
+         pendaftaranInstance.total = paketUji.harga * params.jumlahContohUji.toInteger()
         pendaftaranInstance.save flush:true
 
         request.withFormat {

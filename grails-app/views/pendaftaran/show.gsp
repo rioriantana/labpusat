@@ -113,6 +113,9 @@
 				</g:if>
 			
 			</ol>
+
+			${pendaftaranInstance?.nomorAgenda?.pihakPengambilContohUji}
+
 			<g:form url="[resource:pendaftaranInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
 					<g:link class="edit" action="edit" resource="${pendaftaranInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>

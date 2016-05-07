@@ -8,6 +8,7 @@ class Paket {
 	String parameterUdara
 	String kodePaket
 	Integer nomorUrut
+	Integer biayaAmbil
 	Integer harga
     static constraints = {
     	nama(nullable: true)
@@ -17,6 +18,7 @@ class Paket {
 		parameterUdara(nullable: true)
 		nomorUrut(nullable: true)
 		harga(nullable: true)
+		biayaAmbil(nullable: true)
     }
 
     public String toString(){

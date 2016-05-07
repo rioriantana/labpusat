@@ -84,6 +84,7 @@
 				<td align="center">Banyak</td>
 				<td align="center">Uraian</td>
 				<td align="center">Harga Satuan</td>
+				<td align="center">Biaya Sampling</td>
 				<td align="center">Jumlah</td>
 			</tr>
 			<g:each in="${pendaftaranInstanceList}" status="i" var="pendaftaranInstance">
@@ -91,11 +92,16 @@
 				<td align="center">${pendaftaranInstance.jumlahContohUji}</td>
 				<td>${pendaftaranInstance.jenisContohUji}</td>
 				<td align="right"><g:formatNumber locale="it" format="#,##0" number="${pendaftaranInstance.jenisContohUji.harga}" /></td>
+				<td align="right">
+				<g:if test="${pendaftaranInstance.nomorAgenda.pihakPengambilContohUji == 'Petugas UPT Lab Pusat UNS'}">
+					<g:formatNumber locale="it" format="#,##0" number="${pendaftaranInstance.jenisContohUji.biayaAmbil}" />
+				</g:if>
+				</td>
 				<td align="right"><g:formatNumber locale="it" format="#,##0" number="${pendaftaranInstance.total}" /></td>
 			</tr>
 			</g:each>
 			<tr>
-				<td colspan="3" align="center"> Jumlah Total </td>
+				<td colspan="4" align="center"> Jumlah Total </td>
 				<td align="right">Rp. <g:formatNumber locale="it" format="#,##0" number="${total}" /></td>
 			</tr>
 		</table>

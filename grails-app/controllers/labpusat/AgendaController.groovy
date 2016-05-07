@@ -66,8 +66,14 @@ class AgendaController {
         pendaftaranInstance.kondisiContohUji       = params.kondisiContohUji
         pendaftaranInstance.prosesPengawetan       = params.prosesPengawetan
         pendaftaranInstance.kemasan                = params.kemasan
-        pendaftaranInstance.status                 = "Pendaftaran"
+        if(agendaInstance.pihakPengambilContohUji == 'Petugas UPT Lab Pusat UNS'){
+        pendaftaranInstance.biayaAmbil             = paket.biayaAmbil
+        pendaftaranInstance.total                  = paket.biayaAmbil+(paket.harga * params.jumlahContohUji.toInteger())
+        }
+        else{
         pendaftaranInstance.total                  = paket.harga * params.jumlahContohUji.toInteger()
+        }
+        pendaftaranInstance.status                 = "Pendaftaran"
         pendaftaranInstance.save flush:true
         request.withFormat {
             form multipartForm {
@@ -147,5 +153,9 @@ class AgendaController {
         def total = Pendaftaran.executeQuery("select sum(total) from Pendaftaran as p where p.nomorAgenda = :agenda", [agenda: agendaInstance])
         def tanggal = new Date()
         [agendaInstance: agendaInstance, pendaftaranInstanceList: pendaftaranInstance, total: total.join(", "), tanggal: tanggal]
+    }
+    def biayaAmbil(){
+        def paket = Paket.get(1)
+        render paket.biayaAmbil
     }
 }

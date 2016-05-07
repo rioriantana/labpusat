@@ -70,6 +70,17 @@
 </li>
 
 <li>
+<div class="fieldcontain ${hasErrors(bean: paketInstance, field: 'biayaAmbil', 'error')} ">
+	<label for="biayaAmbil">
+		<g:message code="paket.biayaAmbil.label" default="Biaya Ambil" />
+		
+	</label>
+	<g:field type="number" name="biayaAmbil" value="${paketInstance?.biayaAmbil}"/>
+
+</div>
+</li>
+
+<li>
 <div class="fieldcontain ${hasErrors(bean: paketInstance, field: 'kodePaket', 'error')} ">
 	<label for="kodePaket">
 		<g:message code="paket.kodePaket.label" default="Kode Paket" />

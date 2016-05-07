@@ -41,10 +41,11 @@
          <td align="center">Tanggal Pendaftaran</td>
         <td align="center">Instansi</td>
         <td align="center">Penanggung</td>
-        <td align="center">Jenis Paket</td>
-        <td align="center">Jumlah Contoh Uji</td>
+        <td align="center">Paket</td>
+        <td align="center">Jumlah Sample</td>
         <td align="center">Posisi</td>
         <td align="center">Harga Satuan</td>
+        <td align="center">Sampling</td>
         <td align="center">Total</td>
         <td align="center">Status</td>
     </tr>
@@ -59,6 +60,7 @@
             <td align="center">${pendaftaran?.jumlahContohUji}</td>
             <td align="center">${pendaftaran?.status}</td>
             <td align="right"><g:formatNumber locale="it" format="#,##0" number="${pendaftaran?.jenisContohUji?.harga}"/></td>
+            <td align="right"><g:formatNumber locale="it" format="#,##0" number="${pendaftaran?.biayaAmbil}"/></td>
             <td align="right"><g:formatNumber locale="it" format="#,##0" number="${pendaftaran?.total}"/></td>
             <td align="center"><g:if test="${!pendaftaran?.statusBayar}">BELUM LUNAS</g:if><g:else>LUNAS</g:else></td>
         </tr>

@@ -77,6 +77,15 @@
 				</li>
 				</g:if>
 
+				<g:if test="${paketInstance?.biayaAmbil}">
+				<li class="fieldcontain">
+					<span id="biayaAmbil-label" class="property-label"><g:message code="paket.biayaAmbil.label" default="Biaya Ambil" /></span>
+					
+						<span class="property-value" aria-labelledby="biayaAmbil-label"><g:fieldValue bean="${paketInstance}" field="biayaAmbil"/></span>
+					
+				</li>
+				</g:if>
+
 				<g:if test="${paketInstance?.kodePaket}">
 				<li class="fieldcontain">
 					<span id="kodePaket-label" class="property-label"><g:message code="paket.kodePaket.label" default="Kode Paket" /></span>

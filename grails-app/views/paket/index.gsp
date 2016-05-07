@@ -34,6 +34,8 @@
 						<g:sortableColumn property="parameterUdara" title="${message(code: 'paket.parameterUdara.label', default: 'Parameter Udara')}" />
 					
 						<g:sortableColumn property="harga" title="${message(code: 'paket.harga.label', default: 'Harga')}" />
+
+						<g:sortableColumn property="biayaAmbil" title="${message(code: 'paket.biayaAmbil.label', default: 'Biaya Ambil')}" />
 					
 					</tr>
 				<g:each in="${paketInstanceList}" status="i" var="paketInstance">
@@ -50,6 +52,8 @@
 						<td>${fieldValue(bean: paketInstance, field: "parameterUdara")}</td>
 					
 						<td>${fieldValue(bean: paketInstance, field: "harga")}</td>
+
+						<td>${fieldValue(bean: paketInstance, field: "biayaAmbil")}</td>
 					
 					</tr>
 				</g:each>

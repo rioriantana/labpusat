@@ -10,6 +10,7 @@ class Pendaftaran {
 	String prosesPengawetan
 	String kemasan
 	String status
+	Integer biayaAmbil
 	Integer total
 	String statusBayar
 	String keterangan
@@ -26,6 +27,7 @@ class Pendaftaran {
 		total(nullable: true)
 		statusBayar(nullable: true)
 		keterangan(nullable: true)
+		biayaAmbil(nullable: true)
     }
     public String toString(){
     	"$nomorAgenda - $jenisContohUji"

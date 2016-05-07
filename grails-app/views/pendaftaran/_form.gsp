@@ -41,7 +41,7 @@
 		<g:message code="pendaftaran.jumlahContohUji.label" default="Jumlah Contoh Uji" />
 		
 	</label>
-	<g:field name="jumlahContohUji" type="number" value="${pendaftaranInstance.jumlahContohUji}"/>
+	<g:field name="jumlahContohUji" required="true" type="number" value="${pendaftaranInstance.jumlahContohUji}"/>
 
 </div>
 </li>

@@ -106,7 +106,7 @@
 			</tr>
 		</table>
 	</div>
-	<div class="default-left mohonPembayaran">Mohon pembayaran sejumlah tersebut diatas dibayarkan melalui <strong>Rekening Rektor RPL 028 untuk Operasional BLU 3</strong> Bank BNI nomor rekening <strong>003410448</strong></div>
+	<div class="default-left mohonPembayaran">Mohon pembayaran sejumlah tersebut diatas dibayarkan melalui <strong>Rekening Rektor RPL 028 UNS untuk Operasional BLU 3</strong> Bank BNI nomor rekening <strong>0034104488 dengan mencantumkan UPT Lab Terpadu</strong></div>
 	<div class="default-left tempat">Surakarta, <g:formatDate format="dd-MM-yyyy" date="${tanggal}"/></div>
 	<div class="default-left namapemberi">Lanjariyanti M</div>
 	<div class="default-left nip">NIP. 19740603 100701 2 001</div>

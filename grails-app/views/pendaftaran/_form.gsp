@@ -92,6 +92,17 @@
 </li>
 
 <li>
+<div class="fieldcontain ${hasErrors(bean: pendaftaranInstance, field: 'biayaAmbil', 'error')} ">
+	<label for="biayaAmbil">
+		<g:message code="pendaftaran.biayaAmbil.label" default="Biaya Ambil" />
+		
+	</label>
+	<g:textField name="biayaAmbil" value="${pendaftaranInstance?.biayaAmbil}" required="true"/>
+
+</div>
+</li>
+
+<li>
 <div class="fieldcontain ${hasErrors(bean: pendaftaranInstance, field: 'keterangan', 'error')} ">
 	<label for="keterangan">
 		<g:message code="pendaftaran.keterangan.label" default="Keterangan" />

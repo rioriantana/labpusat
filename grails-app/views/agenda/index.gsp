@@ -19,6 +19,9 @@
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
+			<form method="post"><input placeholder="Masukan Nama Pelanggan" type="text" name="pelanggan"/>
+			<input type="submit" value="cari"/></form> 
+			<br>
 			<div class="tableBaru">
 			<table align="center">
 					<tr>

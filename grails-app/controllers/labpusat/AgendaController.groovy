@@ -12,7 +12,19 @@ class AgendaController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Agenda.list(params), model:[agendaInstanceCount: Agenda.count()]
+        def agendaInstance = []
+        def agendaInstanceCount = []
+        if(!params.pelanggan){
+           agendaInstance =  Agenda.list(params)
+           agendaInstanceCount = Agenda.count()
+        }
+        else{
+             def cari = "%"+params.pelanggan+"%"
+            cari = cari.toUpperCase()
+            agendaInstance = Agenda.executeQuery("from Agenda as i where upper(i.namaInstansi) like :cari", [cari: cari])   
+            agendaInstanceCount = Agenda.executeQuery("select count(*) from Agenda as i where upper(i.namaInstansi) like :cari", [cari: cari])
+        }
+        respond agendaInstance, model:[agendaInstanceCount: agendaInstanceCount]
     }
 
     def show() {

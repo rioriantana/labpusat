@@ -94,7 +94,7 @@
 				<td align="right"><g:formatNumber locale="it" format="#,##0" number="${pendaftaranInstance.jenisContohUji.harga}" /></td>
 				<td align="right">
 				<g:if test="${pendaftaranInstance.nomorAgenda.pihakPengambilContohUji == 'Petugas UPT Lab Pusat UNS'}">
-					<g:formatNumber locale="it" format="#,##0" number="${pendaftaranInstance.jenisContohUji.biayaAmbil}" />
+					<g:formatNumber locale="it" format="#,##0" number="${pendaftaranInstance.biayaAmbil}" />
 				</g:if>
 				</td>
 				<td align="right"><g:formatNumber locale="it" format="#,##0" number="${pendaftaranInstance.total}" /></td>

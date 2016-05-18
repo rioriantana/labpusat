@@ -101,7 +101,8 @@ class PendaftaranController {
         }
         def paketUji = Paket.get(params.jenisContohUji.id)
         def agendaInstance = Agenda.get(params.nomorAgenda.id)
-         pendaftaranInstance.total = paketUji.harga * params.jumlahContohUji.toInteger()
+         pendaftaranInstance.total = (paketUji.harga * params.jumlahContohUji.toInteger() ) + params.biayaAmbil.toInteger()
+         pendaftaranInstance.biayaAmbil = params.biayaAmbil.toInteger()
         pendaftaranInstance.save flush:true
 
         request.withFormat {

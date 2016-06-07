@@ -54,7 +54,7 @@
 	.isitelpon		{top: 250px; left: 250px;}
 	.denganRincian	{top: 280px; left: 50px;}
 	.table			{top: 300px; left: 20px; width: 100%;}
-	.mohonPembayaran{top: 550px; left: 20px;}
+	.mohonPembayaran{top: 500px; left: 100px;}
 	.tempat			{top: 600px; left: 400px;}
 	.pemberi		{top: 630px; left: 400px;}
 	.namapemberi	{top: 710px; left: 400px;}
@@ -106,7 +106,7 @@
 			</tr>
 		</table>
 	</div>
-	<div class="default-left mohonPembayaran">Mohon pembayaran sejumlah tersebut diatas dibayarkan melalui <strong>Rekening Rektor RPL 028 UNS untuk Operasional BLU 3</strong> Bank BNI nomor rekening <strong>0034104488 dengan mencantumkan UPT Lab Terpadu</strong></div>
+	<div class="default-left mohonPembayaran"><center>Mohon pembayaran sejumlah tersebut diatas dibayarkan melalui <br>Nama Rekening : <strong>RPL 028 UNS untuk Operasional BLU 3</strong> Bank BNI <br>nomor rekening <strong>0034104488 </strong><br> Berita/Tujuan : <strong>Layanan UPT Lab Terpadu</strong> </center></div>
 	<div class="default-left tempat">Surakarta, <g:formatDate format="dd-MM-yyyy" date="${tanggal}"/></div>
 	<div class="default-left namapemberi">Lanjariyanti M</div>
 	<div class="default-left nip">NIP. 19740603 100701 2 001</div>
